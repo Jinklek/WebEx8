@@ -3,43 +3,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея изображений — Задание 7</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <title>Обратная связь — Задание 8</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<main class="gallery-section">
-    <h1>Галерея изображений</h1>
-    <div class="slider">
-        <div class="slider__item">
-            <img src="img1.jpg" alt="Изображение 1">
-        </div>
-        <div class="slider__item">
-            <img src="img2.jpg" alt="Изображение 2">
-        </div>
-        <div class="slider__item">
-            <img src="img3.jpg" alt="Изображение 3">
-        </div>
-        <div class="slider__item">
-            <img src="img4.jpg" alt="Изображение 4">
-        </div>
-        <div class="slider__item">
-            <img src="img5.jpg" alt="Изображение 5">
-        </div>
-        <div class="slider__item">
-            <img src="img6.jpg" alt="Изображение 6">
-        </div>
-        <div class="slider__item">
-            <img src="img7.jpg" alt="Изображение 7">
-        </div>
-        <div class="slider__item">
-            <img src="img8.jpg" alt="Изображение 8">
-        </div>
-    </div>
-</main>
+<body>
+<button id="openBtn" type="button">Открыть форму</button>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<div id="modal" class="modal" hidden>
+    <div class="modal__box">
+        <button id="closeBtn" type="button" class="close">×</button>
+        <h2>Обратная связь</h2>
+        <form id="fbForm">
+            <input id="fio" name="fio" type="text" placeholder="ФИО" required>
+            <input id="email" name="email" type="email" placeholder="Email" required>
+            <input id="phone" name="phone" type="tel" placeholder="Телефон" required>
+            <input id="org" name="org" type="text" placeholder="Организация">
+            <textarea id="msg" name="message" rows="3" placeholder="Сообщение" required></textarea>
+            <label class="agree">
+                <input id="agree" name="agree" type="checkbox" required>
+                <span>Согласен на обработку персональных данных</span>
+            </label>
+            <button type="submit">Отправить</button>
+        </form>
+        <p id="status"></p>
+    </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
